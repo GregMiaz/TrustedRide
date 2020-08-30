@@ -28,7 +28,7 @@ namespace RentARide
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<RentARideDbContext>(options =>
+            services.AddDbContext<TrustedRideDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ICarRepository, CarRepository>();

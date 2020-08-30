@@ -6,9 +6,9 @@ using System.Text;
 
 namespace RentARide.Infrastructure
 {
-    public class RentARideDbContext : DbContext
+    public class TrustedRideDbContext : DbContext
     {
-        public RentARideDbContext(DbContextOptions<RentARideDbContext> options) : base(options)
+        public TrustedRideDbContext(DbContextOptions<TrustedRideDbContext> options) : base(options)
         {
 
         }

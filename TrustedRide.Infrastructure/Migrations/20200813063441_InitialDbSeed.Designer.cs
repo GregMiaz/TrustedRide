@@ -9,7 +9,7 @@ using RentARide.Infrastructure;
 
 namespace RentARide.Infrastructure.Migrations
 {
-    [DbContext(typeof(RentARideDbContext))]
+    [DbContext(typeof(TrustedRideDbContext))]
     [Migration("20200813063441_InitialDbSeed")]
     partial class InitialDbSeed
     {

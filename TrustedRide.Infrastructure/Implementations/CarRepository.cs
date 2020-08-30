@@ -10,15 +10,15 @@ namespace RentARide.Infrastructure.Implementations
 {
     public class CarRepository : ICarRepository
     {
-        private readonly RentARideDbContext _context;
+        private readonly TrustedRideDbContext _context;
 
-        public CarRepository(RentARideDbContext context)
+        public CarRepository(TrustedRideDbContext context)
         {
             _context = context;
         }
 
         public IEnumerable<Car> GetAllAvailableCars()
-            => _context.Cars.Include(p => p.Brand).Where(p => p.IsInPromotion == true);
+            => _context.Cars.Include(p => p.Brand).Where(p => p.IsAvailable == true);
 
         public IEnumerable<Car> GetAllCars()
             => _context.Cars.Include(p => p.Brand);

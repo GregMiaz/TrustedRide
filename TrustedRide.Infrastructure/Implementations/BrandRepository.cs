@@ -8,9 +8,9 @@ namespace RentARide.Infrastructure.Implementations
 {
     public class BrandRepository : IBrandRepository
     {
-        private readonly RentARideDbContext _context;
+        private readonly TrustedRideDbContext _context;
 
-        public BrandRepository(RentARideDbContext context)
+        public BrandRepository(TrustedRideDbContext context)
         {
             _context = context;
         }

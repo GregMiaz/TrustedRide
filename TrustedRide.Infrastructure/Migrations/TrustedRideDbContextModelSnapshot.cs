@@ -8,8 +8,8 @@ using RentARide.Infrastructure;
 
 namespace RentARide.Infrastructure.Migrations
 {
-    [DbContext(typeof(RentARideDbContext))]
-    partial class RentARideDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(TrustedRideDbContext))]
+    partial class TrustedRideDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
