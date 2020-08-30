@@ -1,0 +1,13 @@
+﻿@model HomeVM
+
+<partial name="_CarCarousel" />
+
+<h2>Promoted Cars</h2>
+<h4>Choose your best option!</h4>
+
+<div class="row">
+    @foreach (var car in Model.CarsInPromotion)
+    {
+        <partial name="_CarCard" model="car" />
+    }
+</div>

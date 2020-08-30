@@ -8,7 +8,8 @@ namespace TrustedRide.Infrastructure.Interfaces
     public interface ICarRepository
     {
         IEnumerable<Car> GetAllCars();
-        IEnumerable<Car> GetAllAvailableCars();
+        IEnumerable<Car> GetAvailableCars();
+        IEnumerable<Car> GetCarsInPromotion();
         Car GetCarById(int carId);
     }
 }

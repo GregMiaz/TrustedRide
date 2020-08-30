@@ -22,8 +22,11 @@ namespace TrustedRide.Infrastructure.Implementations
                 new Car { CarId = 4, Name = "Aston Martin Vanquish", Price=60.55M, ShortDescription="Grand tourer.", Brand=_brandRepository.GetAllBrands().ToList()[2], IsAvailable=true, Speed=306, IsInPromotion=true,  LongDescription="The second-generation 'Vanquish' (the 'V12' part of the name was dropped for this generation of cars) started life as the Project AM310 Concept and was unveiled at the 2012 Concorso d'Eleganza at Villa d'Este held on the shores of Lake Como, Italy. The concept car was based on the fourth generation of the VH platform.", PictureUrl="/images/cars/aston_martin_vanquish.jpg", ThumbnailPictureUrl="/images/cars/aston_martin_vanquish.jpg" }
             };
 }
-        public IEnumerable<Car> GetAllAvailableCars()
+        public IEnumerable<Car> GetAvailableCars()
             => GetAllCars().Where(c => c.IsAvailable == true);
+
+        public IEnumerable<Car> GetCarsInPromotion()
+            => GetAllCars().Where(c => c.IsInPromotion == true);
 
         public Car GetCarById(int carId)
             => GetAllCars().FirstOrDefault(c => c.CarId == carId);
