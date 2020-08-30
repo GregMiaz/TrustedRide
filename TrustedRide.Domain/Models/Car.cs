@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrustedRide.Domain.Models;
 
-namespace RentARide.Domain.Models
+namespace TrustedRide.Domain.Models
 {
     public class Car
     {

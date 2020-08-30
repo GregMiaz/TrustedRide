@@ -1,10 +1,10 @@
-﻿using RentARide.Domain.Models;
-using RentARide.Infrastructure.Interfaces;
+﻿using TrustedRide.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TrustedRide.Domain.Models;
 
-namespace RentARide.Infrastructure.Implementations
+namespace TrustedRide.Infrastructure.Implementations
 {
     public class InMemoryBrandRepository : IBrandRepository
     {

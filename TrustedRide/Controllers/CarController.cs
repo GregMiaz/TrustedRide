@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RentARide.Infrastructure.Interfaces;
-using RentARide.ViewModels;
+using TrustedRide.ViewModels;
+using TrustedRide.Infrastructure.Interfaces;
 
-namespace RentARide.Controllers
+namespace TrustedRide.Controllers
 {
     public class CarController : Controller
     {

@@ -1,9 +1,9 @@
-﻿using RentARide.Domain.Models;
+﻿using TrustedRide.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RentARide.Infrastructure.Interfaces
+namespace TrustedRide.Infrastructure.Interfaces
 {
     public interface ICarRepository
     {

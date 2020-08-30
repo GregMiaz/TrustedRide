@@ -1,8 +1,9 @@
-﻿using System;
+﻿using TrustedRide.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RentARide.Domain.Models
+namespace TrustedRide.Domain.Models
 {
     public class Brand
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RentARide.Infrastructure.Migrations
+namespace TrustedRide.Infrastructure.Migrations
 {
     public partial class InitialDbSeed : Migration
     {

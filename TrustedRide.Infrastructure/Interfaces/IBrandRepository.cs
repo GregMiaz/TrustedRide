@@ -1,9 +1,9 @@
-﻿using RentARide.Domain.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrustedRide.Domain.Models;
 
-namespace RentARide.Infrastructure.Interfaces
+namespace TrustedRide.Infrastructure.Interfaces
 {
     public interface IBrandRepository
     {

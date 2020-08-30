@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RentARide.Infrastructure;
+using TrustedRide.Infrastructure;
 
-namespace RentARide.Infrastructure.Migrations
+namespace TrustedRide.Infrastructure.Migrations
 {
     [DbContext(typeof(TrustedRideDbContext))]
     [Migration("20200813063441_InitialDbSeed")]

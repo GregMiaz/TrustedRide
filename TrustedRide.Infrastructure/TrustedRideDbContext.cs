@@ -1,10 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RentARide.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using TrustedRide.Domain.Models;
 
-namespace RentARide.Infrastructure
+namespace TrustedRide.Infrastructure
 {
     public class TrustedRideDbContext : DbContext
     {

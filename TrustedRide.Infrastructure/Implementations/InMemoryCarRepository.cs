@@ -1,11 +1,11 @@
-﻿using RentARide.Domain.Models;
-using RentARide.Infrastructure.Interfaces;
+﻿using TrustedRide.Domain.Models;
+using TrustedRide.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RentARide.Infrastructure.Implementations
+namespace TrustedRide.Infrastructure.Implementations
 {
     public class InMemoryCarRepository : ICarRepository
     {

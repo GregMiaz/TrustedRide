@@ -1,10 +1,10 @@
-﻿using RentARide.Domain.Models;
+﻿using TrustedRide.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RentARide.ViewModels
+namespace TrustedRide.ViewModels
 {
     public class CarListVM
     {

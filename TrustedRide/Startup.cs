@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RentARide.Infrastructure;
-using RentARide.Infrastructure.Implementations;
-using RentARide.Infrastructure.Interfaces;
+using TrustedRide.Infrastructure.Implementations;
+using TrustedRide.Infrastructure;
+using TrustedRide.Infrastructure.Interfaces;
 
-namespace RentARide
+namespace TrustedRide
 {
     public class Startup
     {
