@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrustedRide.Infrastructure;
 
 namespace TrustedRide.Infrastructure.Migrations
 {
     [DbContext(typeof(TrustedRideDbContext))]
-    partial class TrustedRideDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200901195131_AddDealerCart")]
+    partial class AddDealerCart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

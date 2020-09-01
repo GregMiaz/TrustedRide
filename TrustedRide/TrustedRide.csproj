@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TrustedRide.Infrastructure\TrustedRide.Infrastructure.csproj" />
+    <ProjectReference Include="..\TrustedRide.Services\TrustedRide.Services.csproj" />
   </ItemGroup>
 
 </Project>

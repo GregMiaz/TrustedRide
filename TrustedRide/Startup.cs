@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using TrustedRide.Infrastructure.Implementations;
 using TrustedRide.Infrastructure;
 using TrustedRide.Infrastructure.Interfaces;
+using TrustedRide.Services.Interfaces;
+using TrustedRide.Services.Implementations;
 
 namespace TrustedRide
 {
@@ -33,6 +35,10 @@ namespace TrustedRide
 
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IDealerCart, DealerCart>(sp => DealerCart.GetCart(sp));
+            services.AddHttpContextAccessor();
+            services.AddSession();
+
             services.AddControllersWithViews();
         }
 
@@ -46,6 +52,8 @@ namespace TrustedRide
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
