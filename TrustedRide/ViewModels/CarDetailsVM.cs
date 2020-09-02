@@ -7,6 +7,7 @@ namespace TrustedRide.ViewModels
 {
     public class CarDetailsVM
     {
+        public int CarId { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }

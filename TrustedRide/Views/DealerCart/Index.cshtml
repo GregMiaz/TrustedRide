@@ -1,0 +1,35 @@
+﻿@model DealerCartVM
+
+<h2>Your dealer cart</h2>
+<h4>Below are beautiful cars in your cart</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Selected qauntity</th>
+            <th>Car</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model.DealerCart.DealerCartItems)
+        {
+            <tr>
+                <td class="text-center">@record.Quantity</td>
+                <td class="text-left">@record.Car.Name</td>
+                <td class="text-right">@record.Car.Price.ToString("C")</td>
+                <td class="text-right">@((record.Quantity * record.Car.Price).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">@Model.CartTotal.ToString("C")</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" asp-controller="Order" asp-action="Checkout">Check out now and ride!</a>
+</div>

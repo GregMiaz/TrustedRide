@@ -35,7 +35,7 @@ namespace TrustedRide
 
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IBrandRepository, BrandRepository>();
-            services.AddScoped<IDealerCart, DealerCart>(sp => DealerCart.GetCart(sp));
+            services.AddScoped<IDealerCart, DealerCart>(serviceProvider => DealerCart.GetCart(serviceProvider));
             services.AddHttpContextAccessor();
             services.AddSession();
 

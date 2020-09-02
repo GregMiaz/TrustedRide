@@ -8,6 +8,8 @@ namespace TrustedRide.Services.Interfaces
 {
     public interface IDealerCart
     {
+        string DealerCartId { get; set; }
+        IEnumerable<DealerCartItem> DealerCartItems { get; set; }
         void AddToCart(Car car, int amount);
         public int RemoveFromCart(Car car);
         IEnumerable<DealerCartItem> GetDealerCartItems();

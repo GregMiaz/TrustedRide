@@ -16,7 +16,7 @@ namespace TrustedRide.Services.Implementations
         private readonly TrustedRideDbContext _context;
 
         public string DealerCartId { get; set; }
-        public List<DealerCartItem> DealerCartItems { get; set; }
+        public IEnumerable<DealerCartItem> DealerCartItems { get; set; }
 
 
         public DealerCart(TrustedRideDbContext context)
