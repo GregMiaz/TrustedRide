@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TrustedRide.Infrastructure.Interfaces;
-using TrustedRide.Services.Interfaces;
 using TrustedRide.ViewModels;
 
 namespace TrustedRide.Controllers

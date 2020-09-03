@@ -4,7 +4,7 @@ using System.Text;
 using TrustedRide.Domain.Models;
 using TrustedRide.Services.Implementations;
 
-namespace TrustedRide.Services.Interfaces
+namespace TrustedRide.Infrastructure.Interfaces
 {
     public interface IDealerCart
     {

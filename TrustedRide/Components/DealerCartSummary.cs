@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TrustedRide.Services.Interfaces;
+using TrustedRide.Infrastructure.Interfaces;
 using TrustedRide.ViewModels;
 
 namespace TrustedRide.Components

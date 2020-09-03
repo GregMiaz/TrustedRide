@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using TrustedRide.Domain.Models;
 using TrustedRide.Infrastructure;
-using TrustedRide.Services.Interfaces;
+using TrustedRide.Infrastructure.Interfaces;
 
 namespace TrustedRide.Services.Implementations
 {
