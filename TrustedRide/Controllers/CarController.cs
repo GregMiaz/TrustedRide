@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TrustedRide.ViewModels;
 using TrustedRide.Infrastructure.Interfaces;
+using TrustedRide.Domain.Models;
 
 namespace TrustedRide.Controllers
 {
@@ -19,11 +20,27 @@ namespace TrustedRide.Controllers
             _brandRepository = brandRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string brand) 
         {
-            var model = new CarListVM();
-            model.Cars = _carRepository.GetAllCars();
-            model.BrandName = "Test Brand";
+            IEnumerable<Car> cars;
+            string currentBrand = string.Empty;
+
+            if (string.IsNullOrEmpty(brand))
+            {
+                cars = _carRepository.GetAllCars().OrderBy(c => c.CarId);
+                currentBrand = "All brands";
+            }
+            else 
+            {
+                cars = _carRepository.GetAllCars().Where(c => c.Brand.Name == brand).OrderBy(c => c.CarId);
+                currentBrand = _brandRepository.GetAllBrands().FirstOrDefault(b => b.Name == brand).Name;
+            }
+
+            var model = new CarListVM
+            {
+                Cars = cars,
+                BrandName = currentBrand
+            };
 
             return View(model);
         }
