@@ -20,6 +20,7 @@ namespace TrustedRide.Infrastructure.Implementations
         {
             order.OrderPlaced = DateTime.UtcNow;
             _context.Orders.Add(order);
+            _context.SaveChanges();
 
             var cartItems = _dealerCart.DealerCartItems;
 

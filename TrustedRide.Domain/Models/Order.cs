@@ -43,6 +43,7 @@ namespace TrustedRide.Domain.Models
         public string Country { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number")]
+        [Display(Name = "Phone number")]
         [StringLength(25)]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
