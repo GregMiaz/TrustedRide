@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TrustedRide.Domain.Models
+﻿namespace TrustedRide.Domain.Models
 {
     public class OrderDetail
     {

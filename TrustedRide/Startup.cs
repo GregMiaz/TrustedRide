@@ -13,6 +13,7 @@ using TrustedRide.Infrastructure.Implementations;
 using TrustedRide.Infrastructure;
 using TrustedRide.Infrastructure.Interfaces;
 using TrustedRide.Services.Implementations;
+using Microsoft.AspNetCore.Identity;
 
 namespace TrustedRide
 {
@@ -32,6 +33,8 @@ namespace TrustedRide
             services.AddDbContext<TrustedRideDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<TrustedRideDbContext>();
+
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IBrandRepository, BrandRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
@@ -40,6 +43,7 @@ namespace TrustedRide
             services.AddSession();
 
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,12 +59,15 @@ namespace TrustedRide
             app.UseSession();
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

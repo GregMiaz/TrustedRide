@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using TrustedRide.Domain.Models;
 using TrustedRide.Infrastructure.Interfaces;
 
 namespace TrustedRide.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IDealerCart _dealerCart;

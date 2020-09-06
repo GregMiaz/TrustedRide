@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TrustedRide.Domain.Models;
 
 namespace TrustedRide.Infrastructure
 {
-    public class TrustedRideDbContext : DbContext
+    public class TrustedRideDbContext : IdentityDbContext<IdentityUser>
     {
         public TrustedRideDbContext(DbContextOptions<TrustedRideDbContext> options) : base(options)
         {

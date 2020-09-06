@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using TrustedRide.Infrastructure.Interfaces;
 using TrustedRide.ViewModels;
 
@@ -35,7 +32,9 @@ namespace TrustedRide.Controllers
 
         public IActionResult AddCarToDealerCart(int id) 
         {
-            var chosenCar = _carRepository.GetAllCars().FirstOrDefault(c => c.CarId == id);
+            var chosenCar = _carRepository
+                .GetAllCars()
+                .FirstOrDefault(c => c.CarId == id);
 
             if (chosenCar != null)
             {
@@ -47,7 +46,9 @@ namespace TrustedRide.Controllers
 
         public IActionResult RemoveCarFromDealerCart(int id) 
         {
-            var carToRemove = _carRepository.GetAllCars().FirstOrDefault(c => c.CarId == id);
+            var carToRemove = _carRepository
+                .GetAllCars()
+                .FirstOrDefault(c => c.CarId == id);
 
             if (carToRemove != null)
             {

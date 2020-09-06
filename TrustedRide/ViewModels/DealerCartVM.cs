@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using TrustedRide.Services.Implementations;
-using TrustedRide.Infrastructure.Interfaces;
+﻿using TrustedRide.Infrastructure.Interfaces;
 
 namespace TrustedRide.ViewModels
 {

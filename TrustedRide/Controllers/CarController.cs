@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using TrustedRide.ViewModels;
-using TrustedRide.Infrastructure.Interfaces;
 using TrustedRide.Domain.Models;
+using TrustedRide.Infrastructure.Interfaces;
+using TrustedRide.ViewModels;
 
 namespace TrustedRide.Controllers
 {
@@ -20,20 +18,27 @@ namespace TrustedRide.Controllers
             _brandRepository = brandRepository;
         }
 
-        public IActionResult List(string brand) 
+        public IActionResult List(string brand)
         {
             IEnumerable<Car> cars;
             string currentBrand = string.Empty;
 
             if (string.IsNullOrEmpty(brand))
             {
-                cars = _carRepository.GetAllCars().OrderBy(c => c.CarId);
+                cars = _carRepository
+                    .GetAllCars()
+                    .OrderBy(c => c.CarId);
                 currentBrand = "All brands";
             }
-            else 
+            else
             {
-                cars = _carRepository.GetAllCars().Where(c => c.Brand.Name == brand).OrderBy(c => c.CarId);
-                currentBrand = _brandRepository.GetAllBrands().FirstOrDefault(b => b.Name == brand).Name;
+                cars = _carRepository
+                    .GetAllCars()
+                    .Where(c => c.Brand.Name == brand)
+                    .OrderBy(c => c.CarId);
+                currentBrand = _brandRepository
+                    .GetAllBrands()
+                    .FirstOrDefault(b => b.Name == brand).Name;
             }
 
             var model = new CarListVM
