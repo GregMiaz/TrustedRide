@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TrustedRide.Infrastructure\TrustedRide.Infrastructure.csproj" />
+    <ProjectReference Include="..\TrustedRide.Domain\TrustedRide.Domain.csproj" />
     <ProjectReference Include="..\TrustedRide.Services\TrustedRide.Services.csproj" />
   </ItemGroup>
 
